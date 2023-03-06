@@ -38,7 +38,8 @@ class Tasks extends BaseController
     if ($result === false){
 
        return redirect()->back()
-                        ->with('errors', $model->errors());
+                        ->with('errors', $model->errors())
+                        ->with('warning', 'Invalid data');
 
     } else {
 

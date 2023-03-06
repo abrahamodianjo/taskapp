@@ -12,7 +12,7 @@
 
             <li>
                <a href="<?= site_url("/tasks/show/" . $task['id']) ?>">
-                <?= $task['description'] ?>
+                <?= esc($task['description']) ?>
             </a>
             </li>
 
