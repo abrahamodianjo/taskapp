@@ -26,4 +26,24 @@ class Tasks extends BaseController
     {
             return view('Tasks/new');
     }
+
+    public function create()
+    {
+        $model = new \App\Models\TaskModel;
+        
+       $result = $model->insert([
+        'description' => $this->request->getPost("description")
+    ]);
+
+    if ($result === false){
+
+       return redirect()->back()
+                        ->with('errors', $model->errors());
+
+    } else {
+
+    return redirect()->to("/tasks/show/$result");
+
+        }   
+    }
 }

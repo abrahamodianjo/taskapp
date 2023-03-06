@@ -6,6 +6,8 @@
 
         <h1>Tasks</h1>
 
+        <a href="<?= site_url("/tasks/new") ?>">New task</a>
+
         <ul><?php foreach($tasks as $task): ?>
 
             <li>
