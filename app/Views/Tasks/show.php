@@ -22,5 +22,7 @@
         
 
     </dl>
+
+    <a href="<?= site_url('/tasks/edit/' . $task['id']) ?>">Edit</a>
   
 <?= $this->endsection() ?>
